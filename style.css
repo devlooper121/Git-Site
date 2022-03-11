@@ -278,7 +278,7 @@ footer>p{
     font-size: 1rem;
 }
 
-@media (max-width: 1030px){
+@media (max-width: 900px){
     header{
         height: 110px;
     }
@@ -310,7 +310,7 @@ footer>p{
         margin-left: 3%;
     }
     .userImg {
-        height: 30px;
+        height: 20px;
     }
     code{
         font-size: .8rem;
@@ -324,6 +324,7 @@ footer>p{
     .index{
         flex-direction: column;
         visibility: hidden;
+        padding: 1px;
     }
 }
 
