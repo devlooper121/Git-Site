@@ -58,17 +58,17 @@ body ::-webkit-scrollbar{
 
 /* Track */
 ::-webkit-scrollbar-track {
-background:#D8E3E7;
+background:#EFFFFD;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background:#35798c;
+background:#85F4FF;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: #555;
+background: #42C2FF;
 }
 /* nav bar design  */
 
@@ -79,7 +79,7 @@ header{
     display: flex;
     flex-direction: column;
     background-color: #EFFFFD;
-    height:110px;
+    height:60px;
     top: 0;
     /* padding-top: 10px; */
     width: 100%;
@@ -87,7 +87,7 @@ header{
 }
 .logo{
     width: 70px;
-    margin: 20px 20px 10px 100px;
+    margin: 10px 10px 10px 100px;
 }
  /* nave element design  */
 nav{
@@ -99,7 +99,7 @@ nav{
 
 .index{
     width: inherit;
-    margin-top:10px;
+    /* margin-top:10px; */
     display: flex;
     justify-content: space-between;
     background-color:white;
@@ -144,7 +144,7 @@ nav{
 .modeButton{
     position:fixed;
     z-index: 6;
-    top: 40px;
+    top: 15px;
     margin: 10px;
     right: 10px;
     width: 100px;
@@ -172,7 +172,6 @@ main {
     display: flex;
     flex-direction: row;
     
-    
 }
 
 /* content container  */
@@ -184,6 +183,8 @@ main {
     justify-content: right;
     flex-direction: column;
     margin-left: 15%;
+    height: 80vh;
+    overflow: scroll;
     /* background-color: #B8FFF9; */
 }
 /* all content class */
@@ -206,7 +207,7 @@ main {
 
 .mainHeading{
     font-weight: 200;
-    font-size: 3rem;
+    font-size: 2rem;
     display: block;
     margin: 10px 0 0 0 ;
     color: #9ad4d0;
@@ -214,6 +215,7 @@ main {
 }
 .mainH{
     display: inline;
+    margin: 0;
 }
 /* second top heading  */
 
@@ -250,7 +252,7 @@ hr .divider{
 /* for chart container */
 
 .chatText{
-    font-size: 1.5em;
+    font-size: 1.3em;
     display: inline;
     color: #000;
     line-height: 1.3;
@@ -412,7 +414,7 @@ code {
 /* footer design container  */
 footer{
     text-align: center;
-    height: 120px;
+    height: 15vh;
     background-color: #42c2ff;
     border-color:#c7d0d4;
 }
@@ -531,7 +533,7 @@ footer>p{
         left: 29px;
     }
 }
-@media (max-width: 370px){
+@media (max-width: 340px){
     .logo{
         width: 60px;
         margin: 20px 10px 10px 40px;
