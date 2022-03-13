@@ -184,7 +184,7 @@ main {
     border-radius: 10px;
     background-color: #EFFFFD;
     height: auto;
-    box-shadow: 0 1px 10px rgba(200,200,100,1) ;
+    box-shadow: 0 1px 10px rgba(133,244,255,1) ;
     transition: all 0.1s ease-in;
     margin: 15px 10px;
     box-sizing: border-box;
@@ -263,7 +263,7 @@ hr .divider{
 .text2, .text1 {
     margin: 10px;
     padding: 5px 15px;
-    background-color: #E5E3C9;
+    background-color: #d8f0ea;
     border: 0px solid #0c1f24;
     border-radius: 10px;
     width: 80%;  
@@ -326,9 +326,7 @@ code {
     font-size: smaller;
 }
 /* we will provide form  */
-aside{
-    
-}
+
 .form {
     position: fixed;
     width: 30vw;
@@ -355,7 +353,7 @@ aside{
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(200,200,100,1);
     margin: 10px 0;
-    opacity: 50%;   
+    opacity: 90%;   
 }
 .contact{
     margin: 30px 0 0 0 ;
@@ -393,7 +391,7 @@ aside{
 footer{
     text-align: center;
     height: 120px;
-    background-color: #42C2FF;
+    background-color: #42c2ff;
     /* border-style: none solid none;
     border-width: 10px; */
     border-color:#c7d0d4;
