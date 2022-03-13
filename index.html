@@ -142,7 +142,7 @@
                                     href="https://git-scm.com/downloads" target="_blank">Git_Download</a> Link. And
                                 download for you own Operating System. And after installing Git not forget to Check in
                                 Command Prompt/ Terminal <code>git --version</code> that will tell you the version of
-                                git which is install in your system. like <code>"git version 2.35.1.windows.2"</code>
+                                git which is install in your system. like <br><code>"git version 2.35.1.windows.2"</code>
                             </p>
                         </div>
                         <img class="userImg" src="expert.png" alt="">
@@ -187,7 +187,7 @@
                         <div class="text2">
                             <p class="chatText"> Now goto your command line and open same directory that you have make
                                 or goto the directory and open command prompt/ terminal and type command in
-                                terminal/command-prompt <code>" git init "</code> It will initialise Git in that
+                                terminal/command-prompt <br> <code>" git init "</code> It will initialise Git in that
                                 Directory and Now git can keep record of your all edits 👀.
                             </p>
                         </div>
@@ -422,12 +422,13 @@
                     
                 </div>
             </section>
-            
+           
         </section>
 
         <aside>
             
         </aside>
+        <button type="reset" class="modeButton">content only</button>
     </main>
     <footer>
         <div class="social">
@@ -439,17 +440,27 @@
     </footer>
     <script type="text/javascript">
 
-        var button = document.getElementById("menuButton");
+        let button = document.getElementById("menuButton");
         button.addEventListener("click", toggleMenue);
+        let dissapearButton = document.querySelector(".modeButton");
+        dissapearButton.addEventListener("click", dissapear);
 
-        var links = document.getElementsByClassName("indexLink");
+        function dissapear(){
+            let allChat = document.getElementsByClassName("chatText");
+            
+            for(var i = 0; i <= allChat.length; i++){
+                allChat[i].classList.toggle("dissapear")
+            }
+        }
+
+        let links = document.getElementsByClassName("indexLink");
 
         for(var i = 0; i < links.length ; i++){
             links[i].addEventListener("click", toggleMenue);
         }
 
         function toggleMenue(){
-            var menuebar = document.getElementById("indexId");
+            let menuebar = document.getElementById("indexId");
             menuebar.classList.toggle("hidden");
 
         }
