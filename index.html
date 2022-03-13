@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git site</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;500&family=Roboto:wght@100;200;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -17,7 +15,6 @@
     <header>
         <nav>
             <h1 class="mainHeading MainH">Welcome to Git-Site!</h1>
-            <h2 class="secondHeading">Here everything you need to know about Git and Github</h2>
             
         </nav>
         <img src="icons/menu.png" alt="menu" id="menuButton">
@@ -141,7 +138,7 @@
                             <p class="chatText"> Installing git is very Easy task You can follow this <a class="link"
                                     href="https://git-scm.com/downloads" target="_blank">Git_Download</a> Link. And
                                 download for you own Operating System. And after installing Git not forget to Check in
-                                Command Prompt/ Terminal <code>git --version</code> that will tell you the version of
+                                Command Prompt/ Terminal <br><code>git --version</code> that will tell you the version of
                                 git which is install in your system. like <br><code>"git version 2.35.1.windows.2"</code>
                             </p>
                         </div>
@@ -157,7 +154,7 @@
                     <div class="prof">
                         <div class="text2">
                             <p class="chatText"> Hey if you are using <span class="highlited">ubuntu</span> then you can
-                                install git in flash by just a command <code>sudo apt install git</code>
+                                install git in flash by just a command <br><code>sudo apt install git</code>
                             </p>
                         </div>
                         <img class="userImg" src="expert.png" alt="">
@@ -179,7 +176,7 @@
                     <div class="prof">
                         <div class="text2">
                             <p class="chatText">Now you need to make a new Directory at your favorite Location on your
-                                computer. Manually or with command <code>mkdir "name of dir"</code> </p>
+                                computer. Manually or with command <br><code>mkdir "name of dir"</code> </p>
                         </div>
                         <img class="userImg" src="expert.png" alt="">
                     </div>
@@ -426,9 +423,20 @@
         </section>
 
         <aside>
-            
+            <section class="form" id="asideForm">
+                <h1 style="margin: 10px 20px;display: block;text-align: left;font-size: 1.5rem;">Developer</h1>
+                <div class="devInfo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaOkL2-JqYjR_6o06Oqn9K6BvCXVFdZXWzeQ&usqp=CAU" alt="" class="devImg">
+                    <p class="devName">Dheeraj Shrivastva</p>
+                </div>
+                <div class="contact">
+                    <p class="special"><span class="material-icons md-48">code</span>Main Developer</p>
+                    <p class="contactinfo"><span class="material-icons md-48"> call</span> +918209371420</p>
+                    <p class="contactinfo"><span class="material-icons md-48"> email</span> mailtodheeraj2@gmail.com</p>
+                </div>
+            </section>
         </aside>
-        <button type="reset" class="modeButton">content only</button>
+        <button type="reset" class="modeButton">Only Code</button>
     </main>
     <footer>
         <div class="social">
@@ -447,7 +455,11 @@
 
         function dissapear(){
             let allChat = document.getElementsByClassName("chatText");
-            
+            if(dissapearButton.textContent == "show details"){
+                dissapearButton.textContent = "only code"
+            }else{
+                dissapearButton.textContent = "show details"
+            }
             for(var i = 0; i <= allChat.length; i++){
                 allChat[i].classList.toggle("dissapear")
             }
