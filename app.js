@@ -58,6 +58,7 @@ function darkModeToggle(){
     for(var i = 0; i < textColor.length; i++){
         textColor[i].classList.toggle("font-dark");
     }
+    
 }
 
 window.onload = function() {
