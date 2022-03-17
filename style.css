@@ -49,36 +49,71 @@ body{
 
 /* Scroolbar design  */
 body ::-webkit-scrollbar{
-    width: 5px;
+    width: 1px;
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 1px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-background:#EFFFFD;
+background:#222831;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background:#85F4FF;
+background:#00000070;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: #42C2FF;
+background: #fff232;
 }
 /* nav bar design  */
 
 /* header design  */
+
+/*  all flex display */
+header, nav , .index, main, #container, .user, .prof, .form{
+    display: flex;
+}
+
+/* normal-top background-colors */
+
+.top-bg-white{
+    background-color: #EFFFFD;
+}
+.top-bg-dark{
+    background-color: #222831;
+}
+/* normal-middle bg color   */
+ 
+.main-bg-white{
+    background-color: #fff;
+} 
+.main-bg-dark{
+    background-color: #393E46;
+} 
+/* text color 1  */
+
+.font-white{
+    color: #222831;
+}
+.font-dark{
+    color: #fff;
+}
+/* box-shadow  */
+.content, .devImg, .contact{
+    box-shadow: 0 1px 10px rgba(200,200,200,2) ;
+    transition: all 0.1s ease-in;
+}
+
+
 header{
     z-index: 5;
     position: fixed;
-    display: flex;
     flex-direction: column;
-    background-color: #EFFFFD;
     height:60px;
     top: 0;
     /* padding-top: 10px; */
@@ -91,51 +126,43 @@ header{
 }
  /* nave element design  */
 nav{
-    display: flex;
     justify-content:left;
     align-items:baseline;
 }
 /* context menue button div  */
 
 .index{
-    width: inherit;
-    /* margin-top:10px; */
-    display: flex;
+    width: 100%;
+    /* padding-left: 200px; */
+    /* height: 40px; */
     justify-content: space-between;
-    background-color:white;
-    padding: 10px;
-    /* opacity: 80%; */
+    padding: 10px 0 10px 0;
 }
 /* context button which is a tag  */
 
 .indexLink{
    text-decoration: none;
-   color: #122c33;
-   background-color:#EFFFFD;
    padding: 2px 20px;
    margin: 0 ;
    border: 0px solid #000;
    border-radius: 3px;
-   font-size: 1rem;
-   box-shadow: 0 1px 2px rgb(54, 52, 54) ;
+   font-size: .8rem;
+   border: 1px solid #5b5c5c;
    opacity: 100%;
 }
 /* hover effect of a tags  */
 
 .indexLink:hover{
     transition: all 0.1s ease-in;
-    background-color: #B8FFF9;
+    background-color: #42C2FF;
+    color: #fff;
 }
 /* menue button design in mobile view  */
 
 #menuButton{
     position:fixed;
     z-index: 6;
-    top: 55px;
-    width: 0px;
-    padding: 10px 20px 0;
     visibility:hidden;
-    color: white;
 }
 
 
@@ -144,10 +171,10 @@ nav{
 .modeButton{
     position:fixed;
     z-index: 6;
-    top: 15px;
+    top: 10px;
     margin: 10px;
     right: 10px;
-    width: 100px;
+    width: auto;
     height: 30px;
     border-style: hidden;
     border-radius: 5px;
@@ -156,22 +183,31 @@ nav{
     transition: all 200ms ease-out  ;
     color: #fff;
 }
+.darkButton{
+    right: 100px;
+    background-color: #222831;
+}
 .modeButton:hover{
     background-color: #fff;
     color: #42C2FF;
     font-weight: 500;
+}
+/* menue button design in mobile view  */
+
+#menuButton{
+    position:fixed;
+    z-index: 6;
+    left: 0;
+    right: 10px;
+    visibility:hidden;
 }
 /* body or main content design  */
 /* main is all middle container  */
 /* main contain a section which is our content container */
 
 main {
-    padding-top: 130px;
-    background-color: #fff;
-    /* border-radius: 10px; */
-    display: flex;
+    margin-top: 90px;
     flex-direction: row;
-    
 }
 
 /* content container  */
@@ -179,12 +215,11 @@ main {
 #container {
     width: 100%;
     max-width: 50%;
-    display: flex;
     justify-content: right;
     flex-direction: column;
-    margin-left: 15%;
+    margin-left: 20%;
     height: 80vh;
-    overflow: scroll;
+    overflow-y: scroll;
     /* background-color: #B8FFF9; */
 }
 /* all content class */
@@ -192,10 +227,7 @@ main {
 .content{
     border: 0px solid #35798c;
     border-radius: 10px;
-    background-color: #EFFFFD;
     height: auto;
-    box-shadow: 0 1px 10px rgba(133,244,255,1) ;
-    transition: all 0.1s ease-in;
     margin: 15px 10px;
     box-sizing: border-box;
     padding: 1% 3%;
@@ -210,7 +242,6 @@ main {
     font-size: 2rem;
     display: block;
     margin: 10px 0 0 0 ;
-    color: #9ad4d0;
     font-family: 'Open Sans', sans-serif;
 }
 .mainH{
@@ -241,10 +272,10 @@ hr .divider{
 
 .details{
     width: 100%;
-    background-color: #EFFFFD;
+    /* background-color: #efefff;
+    background-color: #393E4690; */
     opacity: 80%;
     height:auto;
-    /* box-shadow: 0 5px 15px rgba(25,150,125,1) ; */
     transition: all 0.1s ease-in;
     margin-bottom: 10px;
     /* overflow-y:scroll; */
@@ -254,7 +285,6 @@ hr .divider{
 .chatText{
     font-size: 1.3em;
     display: inline;
-    color: #000;
     line-height: 1.3;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -264,22 +294,17 @@ hr .divider{
 /* user chat and image container*/
 .user {
     text-align: left;
-    display: flex;
 }
 
 /* pro chat and image container */
 .prof{
     text-align: left;
-    display: flex;
-    border: 0px hidden;
-    border-radius: 5px;
 }
 /* their chat container  */
 .text2, .text1 {
     margin: 10px;
     padding: 5px 15px;
-    background-color: #d8f0ea;
-    border: 0px solid #0c1f24;
+    border:0px solid;
     border-radius: 10px;
     width: 80%;  
 }
@@ -331,12 +356,11 @@ code {
 }
  /* highlited text in chat  */
 .highlited{
-   
-    background-color:#EFFFFD;
     border: 1px hidden ;
     border-radius: 3px;
     padding: 0 5px;
-    color: #163740;
+    background-color: black;
+    color: #fff;
     font-weight: 500;
     font-size: smaller;
 }
@@ -352,14 +376,11 @@ code {
 }
 .form {
     position: fixed;
-    width: 30vw;
-    z-index: 2;
-    box-shadow: none;
+    width: 27vw;
+    z-index: 3;
     border-radius: 0px;
     margin: 10px 30px 20px 30px;
-
     color: #c8caca;
-    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -374,7 +395,6 @@ code {
     width: 250px;
     border-style: hidden;
     border-radius: 10px;
-    box-shadow: 0 1px 10px rgba(133,244,255,1) ;
     margin: 10px 0;
     opacity: 90%;   
 }
@@ -383,10 +403,8 @@ code {
     width: 300px;
     padding: 30px 20px;
     text-align: left;
-    box-shadow: 0 1px 10px rgba(133,244,255,1) ;
     border-style: hidden;
     border-radius: 20px;
-    background-color: #fff;
 }
 .special {
     display: inline;
@@ -416,6 +434,7 @@ footer{
     text-align: center;
     height: 15vh;
     background-color: #42c2ff;
+    background-color: #FFD369;
     border-color:#c7d0d4;
 }
 /* footer social paragraph  */
@@ -433,7 +452,7 @@ footer>p{
     }
     main {
         flex-direction: column;
-        padding-top: 90px;
+        margin-top: 90px;
     }
     #container{
         margin-left: 80px;
@@ -441,12 +460,11 @@ footer>p{
     }
     #menuButton{
         visibility:visible;
-        width: 20px;
-        
+        width: 40px;
+        margin-left: 20px;
     }
     .modeButton{
-        top: 55px;
-        width: 80px;
+        top: 50px;
     }
     .mainHeading{
         font-size: 2rem;
@@ -484,20 +502,20 @@ footer>p{
         visibility: hidden;
         padding: 1px;
         opacity: 90%;
+        border: 0px solid #c8caca;
     }
     .indexLink{
         margin-bottom: 5px;
-        box-shadow: none;
         background-color: inherit;
         display: inline;
         width: auto;
+        border: 0px solid #c8caca;
         color: #699db6;
     }
     .form {
         position:relative;
         z-index: 0;
         width: unset;
-        box-shadow: none;
         border-radius: 0px;
         max-width: 100%;
     }
@@ -516,13 +534,13 @@ footer>p{
         margin-left: 0;
         max-width: 100%;
     }
+    .index{
+        margin-top: 30px;
+    }
     .mainHeading{
         font-size: 1.6rem;
     }
-    .modeButton{
-        top: 55px;
-        width: 80px;
-    }
+    
     .devImg{
         width: 180px;   
     }
@@ -545,6 +563,13 @@ footer>p{
     .mainH{
         visibility: hidden;
     }
+    #menuButton{
+        width: 30px;
+        margin-left: 15px;
+    }
+    .index{
+        margin-top: 20px;
+    }
     .devImg{
         width: 180px;   
     }
@@ -561,3 +586,13 @@ footer>p{
     visibility: visible;
     
 }
+
+.bg-dark-head {
+    background-color: #222831;
+
+}
+.bg-dark-main {
+    background-color: #393E46;
+}
+
+.bg-dark-content
