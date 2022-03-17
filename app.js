@@ -59,3 +59,13 @@ function darkModeToggle(){
         textColor[i].classList.toggle("font-dark");
     }
 }
+
+window.onload = function() {
+    var reloading = localStorage.getItem("reloading");
+    if(reloading){
+      localStorage.removeItem("reloading");
+      darkModeToggle();
+    }
+    localStorage.setItem("reloading", "true");
+    
+}
